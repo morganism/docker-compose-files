@@ -1,0 +1,16 @@
+/opt/stacks/cloudflared/docker-compose.yaml
+/opt/stacks/ha/compose.yaml
+/opt/stacks/go2rtc/compose.yaml
+/opt/stacks/postgres/compose.yaml
+/opt/stacks/portainer/compose.yaml
+/opt/stacks/java8/compose.yaml
+/opt/stacks/tailscale/compose.yaml
+/opt/stacks/kalilinux-docker/docker-compose.yml
+/opt/stacks/commandbox/compose.yaml
+/opt/stacks/mruby/mruby/docker-compose.yml
+/opt/stacks/portainer-agent/compose.yaml
+/opt/stacks/mosquitto/compose.yaml
+/opt/stacks/caddy/apps/tutorial/compose.yaml
+/opt/stacks/pwn/docker-compose.yaml
+/opt/stacks/ntfy/docker-compose.yaml
+/opt/stacks/dnsmasq/compose.yaml

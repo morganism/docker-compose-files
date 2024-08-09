@@ -1,0 +1,14 @@
+---
+version: '3.8'
+services:
+  Dockerfile:
+    build: "."
+    image: ubuntu:20.04@sha256:ca5534a51dd04bbcebe9b23ba05f389466cf0c190f1f8f182d7eea92a9671d00
+    environment:
+      IMAGE_FILE: pwnagotchi-raspbian-lite-v1.5.5.img
+    ports:
+    - 2222:2222
+    entrypoint: qemu-system-aarch64 -machine raspi3b -cpu cortex-a72 -nographic -dtb
+      bcm2710-rpi-3-b-plus.dtb -m 1G -smp 4 -kernel kernel8.img -sd ${IMAGE_FILE}
+      -append "rw earlyprintk loglevel=8 console=ttyAMA0,115200 dwc_otg.lpm_enable=0
+      root=/dev/mmcblk0p2 rootdelay=1" -device usb-net,netdev=net0 -netdev user,id=net0,hostfwd=tcp::2222-:22
